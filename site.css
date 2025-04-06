@@ -41,9 +41,6 @@ nav .logo img {
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
@@ -77,43 +74,48 @@ main {
 }
 
 footer {
-  background-color: #bae6fd; 
+  background-color: #bae6fd;
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
   font-size: 0.9em;
 }
 
-.team-member {
+.team-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
-  background-color: #fff7d9;
-  width: auto;
-  max-width: 800px;
-  margin: 0 auto; 
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.team-member .team-image {
+.team-box {
+  background-color: #ffe2ec;
+  border-radius: 20px;
+  padding: 20px;
+  width: fit-content;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team-box img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
-  margin-right: 20px;
-  border: 5px solid #ff8fab; 
+  border-radius: 50%;
+  border: 5px solid #f7c8e0;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
-.team-member .team-info {
-  max-width: 600px;
-}
-
-.team-member h3 {
+.team-info h3 {
   color: #ff8fab;
   margin-bottom: 10px;
+  text-align: center;
 }
 
-.team-member p {
+.team-info p {
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -127,7 +129,7 @@ footer {
 }
 
 .service-card {
-  background-color: #fce1e4; 
+  background-color: #fce1e4;
   border-radius: 10px;
   padding: 10px;
   text-decoration: none;
@@ -147,8 +149,8 @@ footer {
 }
 
 blockquote {
-  background-color: #fde2ff; 
-  border-left: 5px solid #b983ff; 
+  background-color: #fde2ff;
+  border-left: 5px solid #b983ff;
   margin: 20px auto;
   padding: 15px;
   max-width: 600px;
@@ -162,4 +164,9 @@ blockquote footer {
   color: #6a0572;
 }
 
-/* ADJUSTED COLOR SCHEME TO FIT THE EASTER SEASON */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
