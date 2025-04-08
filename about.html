@@ -14,7 +14,10 @@
           <img src="images/pawty_logo.png" alt="Pawsome Party Logo">
         </a>
       </div>
-      <ul>
+
+      <div class="burger" onclick="toggleMenu()">☰</div>
+
+      <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
       </ul>
@@ -67,5 +70,12 @@
       <p>Contact us at <a href="mailto:info@pawsomepawty.com">info@pawsomepawty.com</a></p>
     </footer>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

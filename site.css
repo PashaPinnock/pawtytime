@@ -62,6 +62,40 @@ nav ul li a:hover {
   color: #fff;
 }
 
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6a0572;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
 main {
   padding: 20px 0;
   text-align: center;
@@ -162,12 +196,4 @@ blockquote footer {
   margin-top: 10px;
   font-weight: bold;
   color: #6a0572;
-}
-
-@media (max-width: 768px) {
-  .team-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
 }
